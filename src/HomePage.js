@@ -4,7 +4,7 @@ import { AppBar, Toolbar, Typography, Button, Container } from '@mui/material';
 import { Box } from '@mui/material';
 import { Navbar } from './Navbar';
 
-function HomePage({ connectedWallet }) {
+function HomePage({ connectedWallet, currentAddress }) {
   const handleWalletConnect = async (walletAddress) => {
     try {
       // Make a request to the wallet connection API
@@ -37,7 +37,7 @@ function HomePage({ connectedWallet }) {
       </Typography>
       {connectedWallet ? (
         <Typography variant="body1" component="p" sx={{ mt: 2 }}>
-          Connected Wallet: {connectedWallet}
+          Connected Wallet: {currentAddress}
         </Typography>
       ) : (
         <Typography variant="body1" component="p" sx={{ mt: 2 }}>
