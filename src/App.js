@@ -70,7 +70,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage connectedWallet={connectedWallet} currentAddress={currentAddress} />} />
-          <Route path="/history" element={<HistoryPage connectedWallet={connectedWallet} currentAddress={currentAddress} />} />
+          <Route path="/history" element={<HistoryPage connectedWallet={connectedWallet} currentAddress={currentAddress} contract={contract} web3={web3} allright={allright} />} />
           <Route path="/upload" element={<UploadDocumentPage connectedWallet={connectedWallet} currentAddress={currentAddress} contract={contract} web3={web3} />} />
           {/* <Route path="/wallet" element={<Wallet connectedWallet={connectedWallet} />} /> */}
         </Routes>
@@ -89,7 +89,7 @@ function App() {
           sx={{ Align: 'center', margin: '3em', background: 'linear-gradient(to right, #ffdd00, #ddcc00)', caretColor: 'lime' }}
         /> */}
       </Router>
-      {!connectedWallet? <button onClick={handleWalletConnect}>Connect Wallet</button> :<span></span> }
+      {!connectedWallet? <button style={{display:'block', position:'absolute', marginTop:'-18%',marginLeft:'20px', padding:'6px', color:'white', backgroundColor:'black', borderRadius:'10px'}} onClick={handleWalletConnect}>Connect Wallet</button> :<span></span> }
       
     </>
   );
