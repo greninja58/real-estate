@@ -43,15 +43,15 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 ## Working with Branches
 
 1. Clone the repository: git clone https://github.com/your-username/real-estate.git
-2. Navigate to the project directory: cd real-estate
-3. Create a new branch for your work: git checkout -b my-branch-name
+2. Navigate to the project directory: `cd real-estate`
+3. Create a new branch for your work: `git checkout -b my-branch-name`
 - Replace my-branch-name with a descriptive name for your branch.
 4. Make your changes to the codebase using your preferred code editor.
-5. Stage your changes: git add .
-6. Commit your changes: git commit -m "Add descriptive commit message"
-- Replace Add descriptive commit message with a brief summary of your changes.
-7. Push your branch to the remote repository: git push origin my-branch-name
-- Replace my-branch-name with the name of your branch.
+5. Stage your changes: `git add .`
+6. Commit your changes: `git commit -m "Add descriptive commit message"`
+- Replace `Add descriptive commit` message with a brief summary of your changes.
+7. Push your branch to the remote repository: `git push origin my-branch-name`
+- Replace `my-branch-name` with the name of your branch.
 
 ## Creating a Pull Request
 
