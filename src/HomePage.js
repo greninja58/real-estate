@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Button, Container } from '@mui/material';
 import { Box } from '@mui/material';
 import { Navbar } from './Navbar';
+import img1 from './images/download.jpeg';
 
-function HomePage({ connectedWallet }) {
+function HomePage({ connectedWallet, currentAddress }) {
   const handleWalletConnect = async (walletAddress) => {
     try {
       // Make a request to the wallet connection API
@@ -32,20 +33,22 @@ function HomePage({ connectedWallet }) {
   return (
     <Container maxWidth="mt">
       <Navbar />
-      <Typography variant="h2" component="h2" sx={{ mt: 4 }}>
-        Home Page
-      </Typography>
+      <img src={img1} alt='ML&J' style={{width:'100%', backgroundRepeat:'repeat', height:'220px'}}/>
+      <p style={{marginLeft:'42%',fontSize:'xx-large', fontWeight:'600', color:'black'}}>
+        WELCOME
+      </p>
       {connectedWallet ? (
         <Typography variant="body1" component="p" sx={{ mt: 2 }}>
-          Connected Wallet: {connectedWallet}
+          Connected Wallet: {currentAddress}
         </Typography>
       ) : (
         <Typography variant="body1" component="p" sx={{ mt: 2 }}>
           Please connect to a wallet
-          
         </Typography>
-
       )}
+      <div style={{color:'white', backgroundColor:'black', fontWeight:'500', padding:'4px', marginTop:'17%'}}>
+        <p style={{marginLeft:'25%'}}>Website Policies  |  Terms of Use  |  Help  |  Contact Us  |  Feedback  |  Visitor Analytics  |  Web Information Manager  |   Archives</p>
+      </div>
     </Container>
   );
 }
